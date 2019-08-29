@@ -1,0 +1,14 @@
+title: AllenNLP NER algo for Acharya
+owner: Phonemonk
+author: Phonemonk
+train:
+        cmd: python3 -c "Hello World"
+        type: cmd
+        input: data/trainfile.conll
+        output: stdout
+eval:
+        cmd: python3 -c "Eval"
+        type: cmd
+        input: data/infile.conll
+        output: stdout
+
