@@ -4,6 +4,6 @@ COPY * ./
 
 RUN mkdir -p data/
 
+ENTRYPOINT []
 CMD /bin/bash
-ENTRYPOINT /bin/bash
 
