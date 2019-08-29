@@ -5,4 +5,5 @@ COPY * ./
 RUN mkdir -p data/
 
 CMD /bin/bash
+ENTRYPOINT /bin/bash
 
