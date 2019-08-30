@@ -66,6 +66,6 @@
     "optimizer": "adam",
     "num_epochs": 50,
     "patience": 10,
-    "cuda_device": -1
+    "cuda_device": 0
   }
 }
