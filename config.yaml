@@ -2,12 +2,13 @@ title: AllenNLP NER algo for Acharya
 owner: Phonemonk
 author: Phonemonk
 train:
-        cmd: allennlp train testNERconfig.json -s /output/crf_model
+        cmd: allennlp train testNERconfig.json -s output/crf_model
         type: cmd
         input: data/trainfile.conll
         output: stdout
 eval:
-        cmd: allennlp predict --use-dataset-reader --cuda-device 0 /output/crf_model/model.tar.gz /data/infile.conll
+        #cmd: allennlp predict --use-dataset-reader --cuda-device 0 output/crf_model/model.tar.gz data/infile.conll
+        cmd: python eval_allennlp_to_conll2003.py
         type: cmd
         input: data/infile.conll
         output: stdout
