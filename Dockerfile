@@ -1,7 +1,7 @@
 FROM allennlp/allennlp:v0.8.5
 
-RUN pip3 uninstall torch
-RUN pip3 install torch
+RUN pip3 uninstall torch -y 
+RUN pip3 install torch -y
 
 COPY * ./
 
