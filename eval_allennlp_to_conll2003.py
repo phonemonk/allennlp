@@ -3,11 +3,13 @@
 import sys
 import os
 import json
+import subprocess
 
 
 outfile = sys.argv[1]
 
-os.system("allennlp predict --silent --use-dataset-reader --cuda-device 0 output/crf_model/model.tar.gz data/infile.conll --silent --output-file /tmp/out")
+with open("/tmp/err", "w") as f:
+    subprocess.run(["allennlp", "predict", "--silent", "--output-file", outfile, "--use-dataset-reader", "--cuda-device", "0", "output/crf_model/model.tar.gz", "data/infile.conll"], stderr=f)
 
 with open(outfile) as j:
     data = json.load(j)
