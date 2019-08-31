@@ -9,7 +9,7 @@ import subprocess
 outfile = sys.argv[1]
 
 with open("/tmp/err", "w") as f:
-    subprocess.run(["allennlp", "predict", "--silent", "--output-file", outfile, "--use-dataset-reader", "--cuda-device", "0", "output/crf_model/model.tar.gz", "data/infile.conll"], stderr=f)
+    subprocess.run(["allennlp", "predict", "--silent", "--output-file", outfile, "--use-dataset-reader", "--cuda-device", "0", "output/crf_model/model.tar.gz", "data/infile.conll"], stderr=f, stdout=f)
 
 with open(outfile) as j:
     data = json.load(j)
