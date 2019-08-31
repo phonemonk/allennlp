@@ -7,7 +7,7 @@ import json
 
 outfile = sys.argv[1]
 
-os.exec("allennlp predict --silent --use-dataset-reader --cuda-device 0 output/crf_model/model.tar.gz data/infile.conll --silent --output-file /tmp/out")
+os.system("allennlp predict --silent --use-dataset-reader --cuda-device 0 output/crf_model/model.tar.gz data/infile.conll --silent --output-file /tmp/out")
 
 with open(outfile) as j:
     data = json.load(j)
