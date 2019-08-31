@@ -8,7 +8,7 @@ train:
         output: stdout
 eval:
         #cmd: allennlp predict --use-dataset-reader --cuda-device 0 output/crf_model/model.tar.gz data/infile.conll
-        cmd: python eval_allennlp_to_conll2003.py
+        cmd: python eval_allennlp_to_conll2003.py /tmp/out
         type: cmd
         input: data/infile.conll
         output: stdout
